@@ -46,7 +46,7 @@ function shuffleArray() {
     return array
 }
 
-const Playlist = ({setCurrent}) => {
+const Playlist = ({current ,setCurrent}) => {
     const [list , setList] = useState([])
     useEffect(()=>{
         setList(items)
@@ -71,6 +71,7 @@ const Playlist = ({setCurrent}) => {
             <div>
                  <h1 className='p-2 font-bold text-xl'>{item.desc}</h1>
                 <h1 className='p-2 text-slate-400'>By Pawan Kuymar</h1>  
+                {current===item.id ? <h1 className='p-2 text-green-500'>{'>>>'}Currently Playing</h1> : null}
             </div>
                 
             </div>

@@ -12,7 +12,7 @@ function App() {
     <Header />
     <div className='flex mt-3'>
     <VideoPlayer current={current}/>
-    <Playlist setCurrent={setCurrent}/>
+    <Playlist current = {current} setCurrent={setCurrent}/>
     </div>
     </>
     
